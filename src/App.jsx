@@ -13,7 +13,7 @@ import DashBoard from "./system/admin/DashBoard";
 // import ManageSchedule from "./system/doctor/ManageSchedule";
 // import ManageSpecialty from "./system/admin/ManageSpecialty";
 import ListUser from "./system/admin/ListUser";
-import ManageClinic from "./system/admin/ManageClinic";
+// import ManageClinic from "./system/admin/ManageClinic";
 // import ManagePatient from "./system/doctor/ManagePatient";
 import DashBoardLayout from "./layouts/DashBoardLayout";
 // import ManageHandBook from "./system/admin/ManageHandBook";
@@ -61,7 +61,7 @@ function App() {
 						<Route path="admin/manage-user" element={<ManageUser />} />
 						{/* <Route path="admin/manage-doctor" element={<ManageDoctor />} /> */}
 						<Route path="admin/list-user" element={<ListUser />} />
-						<Route path="admin/manage-clinic" element={<ManageClinic />} />
+						{/* <Route path="admin/manage-clinic" element={<ManageClinic />} /> */}
 						{/* <Route
 							path="admin/manage-specialty"
 							element={<ManageSpecialty />}
