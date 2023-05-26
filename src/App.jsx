@@ -58,7 +58,7 @@ function App() {
 
 					<Route path="/system" element={<DashBoardLayout />}>
 						<Route index element={<DashBoard />} />
-						<Route path="admin/manage-user" element={<ManageUser />} />
+						{/* <Route path="admin/manage-user" element={<ManageUser />} /> */}
 						{/* <Route path="admin/manage-doctor" element={<ManageDoctor />} /> */}
 						{/* <Route path="admin/list-user" element={<ListUser />} />
 						<Route path="admin/manage-clinic" element={<ManageClinic />} /> */}
