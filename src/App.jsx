@@ -7,32 +7,29 @@ import "react-toastify/dist/ReactToastify.css";
 
 import MainLayout from "./layouts/MainLayout";
 import NotFound from "./pages/NotFound";
-
 // import ManageUser from "./system/admin/ManageUser";
 // import ManageDoctor from "./system/admin/ManageDoctor";
-// import DetailDoctor from "./system/doctor/DetailDoctor";
 // import DashBoard from "./system/admin/DashBoard";
 // import ManageSchedule from "./system/doctor/ManageSchedule";
-// import VerifyEmailBooking from "./system/VerifyEmailBooking";
 // import ManageSpecialty from "./system/admin/ManageSpecialty";
-// import DetailSpecialty from "./pages/DetailSpecialty";
+// import ListUser from "./system/admin/ListUser";
 // import ManageClinic from "./system/admin/ManageClinic";
-
 // import ManagePatient from "./system/doctor/ManagePatient";
 // import DashBoardLayout from "./layouts/DashBoardLayout";
 // import ManageHandBook from "./system/admin/ManageHandBook";
-// import DetailHandBook from "./pages/DetailHandBook";
-// import ListUser from "./system/admin/ListUser";
-// import ListSpecialty from "./pages/ListSpecialty";
-// import path from "./constants/path";
-// import DoctorList from "./pages/DoctorList";
-
+import DetailHandBook from "./pages/DetailHandBook";
+import DetailDoctor from "./system/doctor/DetailDoctor";
+import ListSpecialty from "./pages/ListSpecialty";
+import path from "./constants/path";
+import DoctorList from "./pages/DoctorList";
+import DetailSpecialty from "./pages/DetailSpecialty";
+import VerifyEmailBooking from "./system/VerifyEmailBooking";
 const Home = lazy(() => import("./pages/Home"));
-// const SignupForm = lazy(() => import("./pages/SignupForm"));
-// const Login = lazy(() => import("./pages/Login"));
-// const Unauthorize = lazy(() => import("./pages/Unauthorize"));
-// const ProtectedRoute = lazy(() => import("./pages/ProtectedRoute"));
-// const Profile = lazy(() => import("./pages/Profile"));
+const SignupForm = lazy(() => import("./pages/SignupForm"));
+const Login = lazy(() => import("./pages/Login"));
+const Unauthorize = lazy(() => import("./pages/Unauthorize"));
+const ProtectedRoute = lazy(() => import("./pages/ProtectedRoute"));
+const Profile = lazy(() => import("./pages/Profile"));
 
 function App() {
 	return (
@@ -41,7 +38,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<MainLayout />}>
 						<Route index element={<Home />} />
-						{/* <Route path="/signup" element={<SignupForm />} />
+						<Route path="/signup" element={<SignupForm />} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/unauthorized" element={<Unauthorize />} />
 						<Route element={<ProtectedRoute />}>
@@ -56,7 +53,7 @@ function App() {
 						<Route
 							path="/verify-book-appointment"
 							element={<VerifyEmailBooking />}
-						/> */}
+						/>
 					</Route>
 
 					{/* <Route path="/system" element={<DashBoardLayout />}>
