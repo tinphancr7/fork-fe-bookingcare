@@ -16,7 +16,7 @@ import ListUser from "./system/admin/ListUser";
 // import ManageClinic from "./system/admin/ManageClinic";
 // import ManagePatient from "./system/doctor/ManagePatient";
 import DashBoardLayout from "./layouts/DashBoardLayout";
-// import ManageHandBook from "./system/admin/ManageHandBook";
+import ManageHandBook from "./system/admin/ManageHandBook";
 import DetailHandBook from "./pages/DetailHandBook";
 import DetailDoctor from "./system/doctor/DetailDoctor";
 import ListSpecialty from "./pages/ListSpecialty";
@@ -66,8 +66,8 @@ function App() {
 							path="admin/manage-specialty"
 							element={<ManageSpecialty />}
 						/> */}
-						{/* <Route path="admin/manage-handbook" element={<ManageHandBook />} />
-						<Route path="doctor/manage-schedule" element={<ManageSchedule />} />
+						<Route path="admin/manage-handbook" element={<ManageHandBook />} />
+						{/* <Route path="doctor/manage-schedule" element={<ManageSchedule />} />
 						<Route path="doctor/manage-patient" element={<ManagePatient />} /> */}
 					</Route>
 
