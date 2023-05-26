@@ -1,4 +1,4 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer base {
@@ -20,7 +20,6 @@
 	h5 {
 		@apply text-sm font-bold;
 	}
-
 }
 
 @layer components {
@@ -75,4 +74,4 @@
 
 .ql-editor {
 	min-height: 100px;
-} */
+}
