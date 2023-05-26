@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer base {
@@ -20,12 +20,7 @@
 	h5 {
 		@apply text-sm font-bold;
 	}
-	/* ul,
-	li {
-		list-style: revert;
-		margin-left: 20px;
-		font-size: 14px;
-	} */
+
 }
 
 @layer components {
@@ -77,11 +72,7 @@
 	opacity: 0.35;
 	cursor: auto;
 }
-/* .text-editor {
-	width: 1086px;
-	margin: 0 auto;
-} */
 
 .ql-editor {
 	min-height: 100px;
-}
+} */

@@ -1,22 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: [
-		"./index.html",
-		"./src/**/*.{js,ts,jsx,tsx}",
-		"./node_modules/flowbite/**/*.js",
-	],
+	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
-			fontFamily: {
-				body: ["Montserrat", "sans-serif"],
-			},
-
 			colors: {
-				primary: "#45c3d2",
-				bgPrimary: "#f5f5f5",
-				bgGray: "#eeeeee",
+				primary: "#1266dd",
+				secondary: "#f73859",
+				green: "#13bb7b",
+				orange: "#febb02",
+				bgGray: "#f5f5f5",
 			},
 		},
+		// backgroundColor: {
+		// 	primary: "#1266dd",
+		// 	secondary: "#f73859",
+		// },
 	},
-	plugins: [require("flowbite/plugin"), require("@tailwindcss/line-clamp")],
+	// eslint-disable-next-line no-undef
+	plugins: [require("@tailwindcss/line-clamp")],
 };
