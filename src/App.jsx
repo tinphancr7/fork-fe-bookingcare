@@ -7,9 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 import MainLayout from "./layouts/MainLayout";
 import NotFound from "./pages/NotFound";
-import ManageUser from "./system/admin/ManageUser";
-import ManageDoctor from "./system/admin/ManageDoctor";
-import DashBoard from "./system/admin/DashBoard";
+// import ManageUser from "./system/admin/ManageUser";
+// import ManageDoctor from "./system/admin/ManageDoctor";
+// import DashBoard from "./system/admin/DashBoard";
 // import ManageSchedule from "./system/doctor/ManageSchedule";
 // import ManageSpecialty from "./system/admin/ManageSpecialty";
 // import ListUser from "./system/admin/ListUser";
