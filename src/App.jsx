@@ -16,7 +16,7 @@ import ListUser from "./system/admin/ListUser";
 // import ManageClinic from "./system/admin/ManageClinic";
 // import ManagePatient from "./system/doctor/ManagePatient";
 import DashBoardLayout from "./layouts/DashBoardLayout";
-import ManageHandBook from "./system/admin/ManageHandBook";
+
 import DetailHandBook from "./pages/DetailHandBook";
 import DetailDoctor from "./system/doctor/DetailDoctor";
 import ListSpecialty from "./pages/ListSpecialty";
@@ -30,6 +30,7 @@ const Login = lazy(() => import("./pages/Login"));
 const Unauthorize = lazy(() => import("./pages/Unauthorize"));
 const ProtectedRoute = lazy(() => import("./pages/ProtectedRoute"));
 const Profile = lazy(() => import("./pages/Profile"));
+const ManageHandBook = lazy(() => import("./system/admin/ManageHandBook"));
 
 function App() {
 	return (
