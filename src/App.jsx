@@ -8,31 +8,31 @@ import "react-toastify/dist/ReactToastify.css";
 import MainLayout from "./layouts/MainLayout";
 import NotFound from "./pages/NotFound";
 
-import ManageUser from "./system/admin/ManageUser";
-import ManageDoctor from "./system/admin/ManageDoctor";
-import DetailDoctor from "./system/doctor/DetailDoctor";
-import DashBoard from "./system/admin/DashBoard";
-import ManageSchedule from "./system/doctor/ManageSchedule";
-import VerifyEmailBooking from "./system/VerifyEmailBooking";
-import ManageSpecialty from "./system/admin/ManageSpecialty";
-import DetailSpecialty from "./pages/DetailSpecialty";
-import ManageClinic from "./system/admin/ManageClinic";
+// import ManageUser from "./system/admin/ManageUser";
+// import ManageDoctor from "./system/admin/ManageDoctor";
+// import DetailDoctor from "./system/doctor/DetailDoctor";
+// import DashBoard from "./system/admin/DashBoard";
+// import ManageSchedule from "./system/doctor/ManageSchedule";
+// import VerifyEmailBooking from "./system/VerifyEmailBooking";
+// import ManageSpecialty from "./system/admin/ManageSpecialty";
+// import DetailSpecialty from "./pages/DetailSpecialty";
+// import ManageClinic from "./system/admin/ManageClinic";
 
-import ManagePatient from "./system/doctor/ManagePatient";
-import DashBoardLayout from "./layouts/DashBoardLayout";
-import ManageHandBook from "./system/admin/ManageHandBook";
-import DetailHandBook from "./pages/DetailHandBook";
-import ListUser from "./system/admin/ListUser";
-import ListSpecialty from "./pages/ListSpecialty";
-import path from "./constants/path";
-import DoctorList from "./pages/DoctorList";
+// import ManagePatient from "./system/doctor/ManagePatient";
+// import DashBoardLayout from "./layouts/DashBoardLayout";
+// import ManageHandBook from "./system/admin/ManageHandBook";
+// import DetailHandBook from "./pages/DetailHandBook";
+// import ListUser from "./system/admin/ListUser";
+// import ListSpecialty from "./pages/ListSpecialty";
+// import path from "./constants/path";
+// import DoctorList from "./pages/DoctorList";
 
 const Home = lazy(() => import("./pages/Home"));
-const SignupForm = lazy(() => import("./pages/SignupForm"));
-const Login = lazy(() => import("./pages/Login"));
-const Unauthorize = lazy(() => import("./pages/Unauthorize"));
-const ProtectedRoute = lazy(() => import("./pages/ProtectedRoute"));
-const Profile = lazy(() => import("./pages/Profile"));
+// const SignupForm = lazy(() => import("./pages/SignupForm"));
+// const Login = lazy(() => import("./pages/Login"));
+// const Unauthorize = lazy(() => import("./pages/Unauthorize"));
+// const ProtectedRoute = lazy(() => import("./pages/ProtectedRoute"));
+// const Profile = lazy(() => import("./pages/Profile"));
 
 function App() {
 	return (
@@ -41,7 +41,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<MainLayout />}>
 						<Route index element={<Home />} />
-						<Route path="/signup" element={<SignupForm />} />
+						{/* <Route path="/signup" element={<SignupForm />} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/unauthorized" element={<Unauthorize />} />
 						<Route element={<ProtectedRoute />}>
@@ -56,10 +56,10 @@ function App() {
 						<Route
 							path="/verify-book-appointment"
 							element={<VerifyEmailBooking />}
-						/>
+						/> */}
 					</Route>
 
-					<Route path="/system" element={<DashBoardLayout />}>
+					{/* <Route path="/system" element={<DashBoardLayout />}>
 						<Route index element={<DashBoard />} />
 						<Route path="admin/manage-user" element={<ManageUser />} />
 						<Route path="admin/manage-doctor" element={<ManageDoctor />} />
@@ -72,7 +72,7 @@ function App() {
 						<Route path="admin/manage-handbook" element={<ManageHandBook />} />
 						<Route path="doctor/manage-schedule" element={<ManageSchedule />} />
 						<Route path="doctor/manage-patient" element={<ManagePatient />} />
-					</Route>
+					</Route> */}
 
 					<Route path="*" element={<NotFound />} />
 				</Routes>
