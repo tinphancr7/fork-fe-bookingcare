@@ -67,9 +67,14 @@ const scheduleSchema = yup.object({
 });
 
 const bookingSchema = yup.object({
-	doctorId: yup.string().required("Doctor is required"),
-	date: yup.string().required("Date is required"),
-	userName: yup.string().required("UserName is required"),
+	fullName: yup.string().required("FullName is required"),
+	email: yup.string().email("Email is invalid").required("Email is required"),
+	address: yup.string().required("Address is required"),
+	phone: yup.string().required("Phone is required"),
+	gender: yup
+		.string()
+		.oneOf(["M", "F", "O"], "Invalid Gender Type")
+		.required("Required"),
 });
 
 const specialtySchema = yup.object({
@@ -85,4 +90,5 @@ export {
 	markdownSchema,
 	scheduleSchema,
 	specialtySchema,
+	bookingSchema,
 };

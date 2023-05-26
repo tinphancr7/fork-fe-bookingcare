@@ -24,6 +24,8 @@ import ManageHandBook from "./system/admin/ManageHandBook";
 import DetailHandBook from "./pages/DetailHandBook";
 import ListUser from "./system/admin/ListUser";
 import ListSpecialty from "./pages/ListSpecialty";
+import path from "./constants/path";
+import DoctorList from "./pages/DoctorList";
 
 const Home = lazy(() => import("./pages/Home"));
 const SignupForm = lazy(() => import("./pages/SignupForm"));
@@ -47,7 +49,8 @@ function App() {
 						</Route>
 
 						<Route path="/specialties/:id" element={<DetailSpecialty />} />
-						<Route path="/list-specialty" element={<ListSpecialty />} />
+						<Route path={path.specialty} element={<ListSpecialty />} />
+						<Route path={path.doctor} element={<DoctorList />} />
 						<Route path="/handbooks/:id" element={<DetailHandBook />} />
 						<Route path="/doctors/:id" element={<DetailDoctor />} />
 						<Route

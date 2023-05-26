@@ -6,6 +6,7 @@ import {useState} from "react";
 import {logout} from "../../redux/features/userSlice";
 import {handleParseBufferImage} from "../../utils/helpers";
 import {Link} from "react-router-dom";
+import path from "../../constants/path";
 
 const Header = () => {
 	const {t} = useTranslation();
@@ -28,24 +29,25 @@ const Header = () => {
 				</Link>
 			</div>
 			<div className="flex justify-between items-center gap-5">
-				<div>
+				<Link to={path.specialty}>
 					<h4>{t("homeheader.specialty")}</h4>
 					<span className="text-xs font-light">
 						{t("homeheader.search-doctor")}
 					</span>
-				</div>
+				</Link>
+				<Link to={path.doctor}>
+					<h4>{t("homeheader.doctor")}</h4>
+					<span className="text-xs font-light">
+						{t("homeheader.select-doctor")}
+					</span>
+				</Link>
 				<div>
 					<h4>{t("homeheader.health-facility")}</h4>
 					<span className="text-xs font-light">
 						{t("homeheader.select-room")}
 					</span>
 				</div>
-				<div>
-					<h4>{t("homeheader.doctor")}</h4>
-					<span className="text-xs font-light">
-						{t("homeheader.select-doctor")}
-					</span>
-				</div>
+
 				<div>
 					<h4>{t("homeheader.fee")}</h4>
 					<span className="text-xs font-light">
@@ -54,7 +56,7 @@ const Header = () => {
 				</div>
 			</div>
 			<div className="flex justify-center items-center gap-2 relative">
-				{userInfo && (
+				{/* {userInfo && (
 					<div>
 						{userInfo?.image ? (
 							<button
@@ -87,65 +89,65 @@ const Header = () => {
 						)}
 						{toggle ? <DropDown userInfo={userInfo} /> : null}
 					</div>
-				)}
+				)} */}
 				<Menu />
 			</div>
 		</div>
 	);
 };
-const DropDown = ({userInfo}) => {
-	const dispatch = useDispatch();
-	const handleLogout = () => {
-		dispatch(logout());
-	};
-	return (
-		<div
-			id="dropdownAvatar"
-			className="z-10 absolute top-[50px] right-10  bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-		>
-			<div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-				<div>{userInfo?.firstName}</div>
-				<div className="font-medium truncate">{userInfo?.email}</div>
-			</div>
-			<ul
-				className="py-2 text-sm text-gray-700 dark:text-gray-200"
-				aria-labelledby="dropdownUserAvatarButton"
-			>
-				<li>
-					<a
-						href="#"
-						className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-					>
-						Dashboard
-					</a>
-				</li>
-				<li>
-					<a
-						href="#"
-						className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-					>
-						Settings
-					</a>
-				</li>
-				<li>
-					<a
-						href="#"
-						className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-					>
-						Earnings
-					</a>
-				</li>
-			</ul>
-			<div className="py-2">
-				<a
-					href="#"
-					className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-					onClick={handleLogout}
-				>
-					Sign out
-				</a>
-			</div>
-		</div>
-	);
-};
+// const DropDown = ({userInfo}) => {
+// 	const dispatch = useDispatch();
+// 	const handleLogout = () => {
+// 		dispatch(logout());
+// 	};
+// 	return (
+// 		<div
+// 			id="dropdownAvatar"
+// 			className="z-10 absolute top-[50px] right-10  bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+// 		>
+// 			<div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+// 				<div>{userInfo?.firstName}</div>
+// 				<div className="font-medium truncate">{userInfo?.email}</div>
+// 			</div>
+// 			<ul
+// 				className="py-2 text-sm text-gray-700 dark:text-gray-200"
+// 				aria-labelledby="dropdownUserAvatarButton"
+// 			>
+// 				<li>
+// 					<a
+// 						href="#"
+// 						className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+// 					>
+// 						Dashboard
+// 					</a>
+// 				</li>
+// 				<li>
+// 					<a
+// 						href="#"
+// 						className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+// 					>
+// 						Settings
+// 					</a>
+// 				</li>
+// 				<li>
+// 					<a
+// 						href="#"
+// 						className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+// 					>
+// 						Earnings
+// 					</a>
+// 				</li>
+// 			</ul>
+// 			<div className="py-2">
+// 				<a
+// 					href="#"
+// 					className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+// 					onClick={handleLogout}
+// 				>
+// 					Sign out
+// 				</a>
+// 			</div>
+// 		</div>
+// 	);
+// };
 export default Header;

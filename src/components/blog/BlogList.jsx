@@ -13,7 +13,7 @@ import CardBlog from "../card/CardBlog";
 
 const BlogList = () => {
 	return (
-		<div className="wrapper ">
+		<div className="wrapper mt-5">
 			<Swiper
 				slidesPerView={4}
 				spaceBetween={40}

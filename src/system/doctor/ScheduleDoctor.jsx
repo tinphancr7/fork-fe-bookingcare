@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import moment from "moment";
-import "moment/locale/vi"; // without this line it didn't work
+import "moment/dist/locale/vi"; // without this line it didn't work
 import {useParams} from "react-router-dom";
 import {useGetScheduleDoctorByDateQuery} from "../../redux/api/doctorApi";
 import {AiFillCalendar} from "react-icons/ai";
@@ -55,6 +55,7 @@ const ScheduleDoctor = ({doctorId}) => {
 		setDate(e.target.value);
 	};
 	const handleClickSchedule = (item) => {
+		console.log(item);
 		dispatch(setBookingInfo(item));
 		toggleHandler();
 	};

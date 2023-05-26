@@ -6,6 +6,7 @@ import DoctorList from "../components/doctor-list/DoctorList";
 import {useGetAllSpecialtyQuery} from "../redux/api/specialtyApi";
 import {useGetClinicQuery} from "../redux/api/clinicApi";
 import HandBook from "../system/admin/HandBook";
+import path from "../constants/path";
 
 const Home = () => {
 	const {data: specialties} = useGetAllSpecialtyQuery(10);
@@ -15,17 +16,18 @@ const Home = () => {
 		<>
 			<Banner />
 			<BlogList />
-			<SlickList
+			{/* <SlickList
 				isTopDoctor={false}
 				data={[]}
 				title="Bác sĩ từ xa qua Video"
 				bg="bgPrimary"
-			/>
+			/> */}
 			<SlickList
 				isTopDoctor={false}
 				data={specialties}
 				title="Chuyên khoa phổ biến"
 				bg=""
+				path={path.specialty}
 			/>
 			<SlickList
 				data={clinics}

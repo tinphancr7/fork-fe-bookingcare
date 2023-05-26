@@ -10,9 +10,10 @@ import {NumericFormat} from "react-number-format";
 
 const ProfileDoctor = ({doctorId, isShow = false}) => {
 	const {data: doctorInfo} = useGetDetailDoctorByIdQuery(doctorId);
-	console.log(doctorInfo);
+
 	// @ts-ignore
 	const bookingInfo = useSelector((state) => state.reducer.booking.bookingInfo);
+
 	// @ts-ignore
 	const lang = useSelector((state) => state.reducer.lang.lang);
 	const {t} = useTranslation();

@@ -1,5 +1,4 @@
 import {useEffect, useMemo} from "react";
-import useToggle from "../../hooks/useToggle";
 import {useParams} from "react-router-dom";
 import {useGetDetailDoctorByIdQuery} from "../../redux/api/doctorApi";
 import {Formik} from "formik";
@@ -24,6 +23,7 @@ import CustomeDatePicker from "../../components/date/CustomeDatePicker";
 import moment from "moment";
 import {toast} from "react-toastify";
 import {useTranslation} from "react-i18next";
+import {bookingSchema} from "../../utils/validate";
 
 const BookingModal = ({toggleHandler}) => {
 	// @ts-ignore
@@ -31,6 +31,7 @@ const BookingModal = ({toggleHandler}) => {
 	const {t} = useTranslation();
 
 	const {id} = useParams();
+
 	const {data: doctorInfo, isFetching} = useGetDetailDoctorByIdQuery(id);
 
 	// @ts-ignore
@@ -48,6 +49,7 @@ const BookingModal = ({toggleHandler}) => {
 	useEffect(() => {
 		if (isSuccess) {
 			toast.success("Đặt lịch thành công");
+			toggleHandler();
 		}
 	}, [isSuccess]);
 	// @ts-ignore
@@ -79,13 +81,12 @@ const BookingModal = ({toggleHandler}) => {
 										gender: "",
 										reason: "",
 									}}
-									// validationSchema={loginSchema}
+									validationSchema={bookingSchema}
 									onSubmit={(values, {setSubmitting, resetForm}) => {
 										setTimeout(() => {
-											let birthDay =
-												values.birthDay === ""
-													? moment(new Date()).format("DD/MM/YYYY")
-													: values.birthDay;
+											values.birthDay === ""
+												? moment(new Date()).format("DD/MM/YYYY")
+												: values.birthDay;
 											createBookingAppointment({
 												...values,
 												doctorId: id,
@@ -95,7 +96,7 @@ const BookingModal = ({toggleHandler}) => {
 												timeString: buildTimeBooking(bookingInfo, lang),
 												doctorName: infoPosFullName(doctorInfo, lang),
 											});
-											// resetForm();
+											resetForm();
 											setSubmitting(false);
 										}, 2000);
 									}}
@@ -115,7 +116,7 @@ const BookingModal = ({toggleHandler}) => {
 													/>
 												</span>
 											</div>
-											<ProfileDoctor doctorId={id} />
+											<ProfileDoctor doctorId={bookingInfo?.doctorId} />
 											<div className="grid grid-cols-2 gap-5">
 												<MyTextInput
 													label={t("patient.booking-modal.fullName")}

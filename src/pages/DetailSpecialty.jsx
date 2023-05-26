@@ -76,7 +76,7 @@ const DetailSpecialty = () => {
 				{data?.doctorSpecialty?.map((item, index) => (
 					<div
 						key={index}
-						className="grid grid-cols-2 gap-10 rounded-md p-4   bg-white shadow"
+						className="grid grid-cols-2 gap-10 rounded-md p-4 bg-white shadow"
 					>
 						<div className="border-r border-slate-200 pr-5">
 							<ProfileDoctor doctorId={item?.doctorId} isShow={true} />

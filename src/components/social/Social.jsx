@@ -6,15 +6,15 @@ const Social = () => {
 			<h2 className="pb-10">Truyền thông nói về BookingCare</h2>
 			<div className="flex gap-10">
 				<div>
-					{/* <iframe
+					<iframe
 						width="560"
 						height="315"
 						title="BookingCare trên VTV1"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 						// @ts-ignore
 						allowFullScreen=""
-						src="https://www.youtube-nocookie.com/embed/FyDQljKtWnI?autoplay=1"
-					></iframe> */}
+						src="https://www.youtube-nocookie.com/embed/FyDQljKtWnI?"
+					></iframe>
 				</div>
 				<div>
 					<ul className="flex flex-wrap gap-5">

@@ -131,6 +131,10 @@ const buildDoctorName = (bookingInfo, lang) => {
 			: `${bookingInfo?.doctorData?.lastName} ${bookingInfo?.doctorData?.firstName}`;
 	return `${fullName}`;
 };
+// Function to remove Vietnamese diacritics
+const removeVietnameseDiacritics = (str) => {
+	return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
 export {
 	services,
 	getBase64,
@@ -140,4 +144,5 @@ export {
 	buildTimeBooking,
 	infoPosFullName,
 	buildDoctorName,
+	removeVietnameseDiacritics,
 };
