@@ -4,26 +4,8 @@ import Spinner from "./components/spin/Spinner";
 
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-import MainLayout from "./layouts/MainLayout";
-import NotFound from "./pages/NotFound";
-import ManageUser from "./system/admin/ManageUser";
-// import ManageDoctor from "./system/admin/ManageDoctor";
-import DashBoard from "./system/admin/DashBoard";
-// import ManageSchedule from "./system/doctor/ManageSchedule";
-// import ManageSpecialty from "./system/admin/ManageSpecialty";
-import ListUser from "./system/admin/ListUser";
-// import ManageClinic from "./system/admin/ManageClinic";
-// import ManagePatient from "./system/doctor/ManagePatient";
-import DashBoardLayout from "./layouts/DashBoardLayout";
-
-import DetailHandBook from "./pages/DetailHandBook";
-import DetailDoctor from "./system/doctor/DetailDoctor";
-import ListSpecialty from "./pages/ListSpecialty";
 import path from "./constants/path";
-import DoctorList from "./pages/DoctorList";
-import DetailSpecialty from "./pages/DetailSpecialty";
-import VerifyEmailBooking from "./system/VerifyEmailBooking";
+
 const Home = lazy(() => import("./pages/Home"));
 const SignupForm = lazy(() => import("./pages/SignupForm"));
 const Login = lazy(() => import("./pages/Login"));
@@ -31,6 +13,25 @@ const Unauthorize = lazy(() => import("./pages/Unauthorize"));
 const ProtectedRoute = lazy(() => import("./pages/ProtectedRoute"));
 const Profile = lazy(() => import("./pages/Profile"));
 const ManageHandBook = lazy(() => import("./system/admin/ManageHandBook"));
+const ManageDoctor = lazy(() => import("./system/admin/ManageDoctor"));
+const ManageSpecialty = lazy(() => import("./system/admin/ManageSpecialty"));
+const ManageClinic = lazy(() => import("./system/admin/ManageClinic"));
+const ManageSchedule = lazy(() => import("./system/doctor/ManageSchedule"));
+const ManagePatient = lazy(() => import("./system/doctor/ManagePatient"));
+const ManageUser = lazy(() => import("./system/admin/ManageUser"));
+const ListUser = lazy(() => import("./system/admin/ListUser"));
+
+const NotFound = lazy(() => import("./pages/NotFound"));
+const MainLayout = lazy(() => import("./layouts/MainLayout"));
+const DashBoardLayout = lazy(() => import("./layouts/DashBoardLayout"));
+const ListSpecialty = lazy(() => import("./pages/ListSpecialty"));
+const DetailSpecialty = lazy(() => import("./pages/DetailSpecialty"));
+const DetailHandBook = lazy(() => import("./pages/DetailHandBook"));
+
+const DoctorList = lazy(() => import("./pages/DoctorList"));
+const VerifyEmailBooking = lazy(() => import("./system/VerifyEmailBooking"));
+const DetailDoctor = lazy(() => import("./system/doctor/DetailDoctor"));
+const DashBoard = lazy(() => import("./system/admin/DashBoard"));
 
 function App() {
 	return (
@@ -60,16 +61,16 @@ function App() {
 					<Route path="/system" element={<DashBoardLayout />}>
 						<Route index element={<DashBoard />} />
 						<Route path="admin/manage-user" element={<ManageUser />} />
-						{/* <Route path="admin/manage-doctor" element={<ManageDoctor />} /> */}
+						<Route path="admin/manage-doctor" element={<ManageDoctor />} />
 						<Route path="admin/list-user" element={<ListUser />} />
-						{/* <Route path="admin/manage-clinic" element={<ManageClinic />} /> */}
-						{/* <Route
+						<Route path="admin/manage-clinic" element={<ManageClinic />} />
+						<Route
 							path="admin/manage-specialty"
 							element={<ManageSpecialty />}
-						/> */}
+						/>
 						<Route path="admin/manage-handbook" element={<ManageHandBook />} />
-						{/* <Route path="doctor/manage-schedule" element={<ManageSchedule />} />
-						<Route path="doctor/manage-patient" element={<ManagePatient />} /> */}
+						<Route path="doctor/manage-schedule" element={<ManageSchedule />} />
+						<Route path="doctor/manage-patient" element={<ManagePatient />} />
 					</Route>
 
 					<Route path="*" element={<NotFound />} />
