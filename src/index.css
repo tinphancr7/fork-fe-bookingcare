@@ -68,8 +68,8 @@
 }
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
-	opacity: 0.35;
-	cursor: auto;
+	opacity: 0.35 !important;
+	cursor: auto !important;
 }
 
 .ql-editor {
