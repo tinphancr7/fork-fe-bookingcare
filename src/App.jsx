@@ -9,7 +9,7 @@ import MainLayout from "./layouts/MainLayout";
 import NotFound from "./pages/NotFound";
 // import ManageUser from "./system/admin/ManageUser";
 // import ManageDoctor from "./system/admin/ManageDoctor";
-// import DashBoard from "./system/admin/DashBoard";
+import DashBoard from "./system/admin/DashBoard";
 // import ManageSchedule from "./system/doctor/ManageSchedule";
 // import ManageSpecialty from "./system/admin/ManageSpecialty";
 // import ListUser from "./system/admin/ListUser";
@@ -57,7 +57,7 @@ function App() {
 					</Route>
 
 					<Route path="/system" element={<DashBoardLayout />}>
-						{/* <Route index element={<DashBoard />} /> */}
+						<Route index element={<DashBoard />} />
 						{/* <Route path="admin/manage-user" element={<ManageUser />} /> */}
 						{/* <Route path="admin/manage-doctor" element={<ManageDoctor />} /> */}
 						{/* <Route path="admin/list-user" element={<ListUser />} />
