@@ -5,7 +5,7 @@ import path from "../constants/path";
 
 const MainLayout = () => {
 	const location = useLocation();
-	console.log(location.pathname.includes(path.doctor || path.specialty));
+
 	return (
 		<div>
 			{!location.pathname.includes(path.doctor) &&

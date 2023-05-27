@@ -70,6 +70,7 @@
 .swiper-button-prev.swiper-button-disabled {
 	opacity: 0.35 !important;
 	cursor: auto !important;
+	pointer-events: painted !important;
 }
 
 .ql-editor {

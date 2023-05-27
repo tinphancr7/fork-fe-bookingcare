@@ -55,7 +55,6 @@ const ScheduleDoctor = ({doctorId}) => {
 		setDate(e.target.value);
 	};
 	const handleClickSchedule = (item) => {
-		console.log(item);
 		dispatch(setBookingInfo(item));
 		toggleHandler();
 	};
