@@ -1,5 +1,6 @@
 import {useField, useFormikContext} from "formik";
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 const CustomeDatePicker = ({label, ...props}) => {
 	// @ts-ignore
 	const [field, meta] = useField(props);
